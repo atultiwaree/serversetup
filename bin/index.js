@@ -10,7 +10,7 @@ const fs = require("fs");
 const args = process.argv.slice(2);
 
 if (args.length < 1) {
-  console.error(chalk.red("Please enter folder name"));
+  console.error(chalk.red("🚩  Please enter folder name"));
   process.exit(1); //an error occurred
 }
 

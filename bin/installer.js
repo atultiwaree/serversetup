@@ -3,7 +3,7 @@ const chalk = require("chalk");
 module.exports.packageInstaller = async (pathToWritePackage) => {
   console.log(chalk.green("🚧  Installing package: Express, Dotenv, Morgan, Nodemon"));
 
-  var args = "npm install express morgan dotenv nodemon";
+  var args = "npm install express morgan dotenv";
 
   var options = {
     stdio: "inherit", //feed all child process logging into parent process
