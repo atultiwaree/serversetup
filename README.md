@@ -4,6 +4,8 @@
 Serversetup is a "npx tool" that generates essential files, configure npm packages and serves developers with basic setup of node express server within a minutejust like create-react-app.
 
 
+[![serversetup-npm-package-logo.png](https://i.postimg.cc/zBFPGc1q/serversetup-npm-package-logo.png)](https://postimg.cc/xJqPsgCZ)
+
 
 ## Installation
 
@@ -34,13 +36,6 @@ To test type bellow command in your terminal or just paste url in your browser
   curl http://localhost:3000
 ```
 
-[![serversetup-npm-package-logo.png](https://i.postimg.cc/zBFPGc1q/serversetup-npm-package-logo.png)](https://postimg.cc/xJqPsgCZ)
-
-## Authors
-
-- [@atultiwaree](https://www.github.com/atultiwaree)
-
-
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
@@ -50,6 +45,11 @@ To run this project, you will need to add the following environment variables to
 `Mogodb connection url` 
 
 👋 .env constants are given inside index.js as comments feel free to use
+
+
+## Authors
+
+- [@atultiwaree](https://www.github.com/atultiwaree)
 
     
 ## Tech Stack
