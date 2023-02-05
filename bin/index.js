@@ -1,8 +1,11 @@
 #! /usr/bin/env node
 
+//Using module instead of global console
+
+const { log } = require("node:console");
+
 const { pckgJson } = require("./templates/package.template");
 const { packageInstaller } = require("./installer");
-
 const chalk = require("chalk");
 const path = require("path");
 const fs = require("fs");
@@ -17,9 +20,11 @@ if (args.length < 1) {
 const inputDirectory = args.join("");
 
 if (!fs.existsSync(inputDirectory)) {
-  console.log(chalk.gray("🤖  Logs..."));
+  log(chalk.gray("🤖  Logs..."));
+
   fs.mkdirSync(inputDirectory);
-  console.log(chalk.green(`✔️  Created directory ${inputDirectory} `));
+  log(chalk.green(`✔️  Created directory ${inputDirectory} `));
+
   var pathToWritePackage = path.join(process.cwd(), inputDirectory);
 
   fs.writeFile(path.join(pathToWritePackage, "package.json"), JSON.stringify(pckgJson(inputDirectory)), (err) => {
@@ -27,12 +32,13 @@ if (!fs.existsSync(inputDirectory)) {
       console.error(err);
     }
     // file written successfully
-    console.log(chalk.green("✔️  Package.json created"));
+    log(chalk.green("✔️  Package.json created"));
   });
 
   fs.copyFile(`${__dirname}/templates/template.js`, `${pathToWritePackage}/index.js`, (err) => {
     if (err) throw err;
-    console.log(chalk.green("✔️  Index.js created"));
+
+    log(chalk.green("✔️  Index.js created"));
   });
 
   //Install packages

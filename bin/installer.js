@@ -1,7 +1,9 @@
+const { log } = require("node:console");
+
 const { spawn } = require("child_process");
 const chalk = require("chalk");
 module.exports.packageInstaller = (pathToWritePackage) => {
-  console.log(chalk.green("🚧  Installing package: Express, Dotenv, Morgan, Nodemon"));
+  log(chalk.green("🚧  Installing package: Express, Dotenv, Morgan, Nodemon"));
 
   var args = "npm install express morgan dotenv";
 
@@ -16,7 +18,7 @@ module.exports.packageInstaller = (pathToWritePackage) => {
 
   childProcess.on("close", function (code) {
     // process.stdout.write('"npm install" finished with code ' + code + "\n");
-    console.log(chalk.green('✔️  "npm installation" finished with code ' + code + "\n"));
-    console.log(chalk.blue("❤  Thanks for trying serversetup"));
+    log(chalk.green('✔️  "npm installation" finished with code ' + code + "\n"));
+    log(chalk.blue("❤  Thanks for trying serversetup"));
   });
 };
