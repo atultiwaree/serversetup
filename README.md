@@ -9,7 +9,7 @@ Serversetup is a "npx tool" that generates essential files, configure npm packag
 
 ## Installation
 
-Install my-project with npm
+Install server setup with "npx"
 
 ```bash
   npx serversetup <directory-name>
@@ -30,7 +30,7 @@ If you're using node version < 18
   nodemon
 ```
 
-To test type bellow command in your terminal or just paste url in your browser 
+To test if serversetup configured files are all okay paste url below to browser or just make a curl request
 
 ```bash
   curl http://localhost:3000

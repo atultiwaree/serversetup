@@ -1,6 +1,6 @@
 const { spawn } = require("child_process");
 const chalk = require("chalk");
-module.exports.packageInstaller = async (pathToWritePackage) => {
+module.exports.packageInstaller = (pathToWritePackage) => {
   console.log(chalk.green("🚧  Installing package: Express, Dotenv, Morgan, Nodemon"));
 
   var args = "npm install express morgan dotenv";
