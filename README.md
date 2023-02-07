@@ -1,6 +1,6 @@
 # serversetup
 
-Serversetup is a "npx tool" that generates essential files, configure npm packages and serves developers with basic setup of node express server within a minutejust like create-react-app.
+Serversetup is a "npx tool" that generates essential files, configure npm packages and serves developers with basic setup of node express server within a minute just like create-react-app.
 
 [![serversetup-npm-package-logo.png](https://i.postimg.cc/zBFPGc1q/serversetup-npm-package-logo.png)](https://postimg.cc/xJqPsgCZ)
 
