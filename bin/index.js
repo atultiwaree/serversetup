@@ -20,23 +20,23 @@ if (args.length < 1) {
 const inputDirectory = args.join("");
 
 if (!fs.existsSync(inputDirectory)) {
-  log(chalk.gray("🤖 Logs..."));
+  log(chalk.gray(`Setting up server for ${inputDirectory}`));
 
   fs.mkdirSync(inputDirectory);
-  log(chalk.green(`✔️  Created directory ${inputDirectory} `));
+  log(chalk.green(`[1/4]  ✔️  Created directory ${inputDirectory} `));
 
   var pathToWritePackage = path.join(process.cwd(), inputDirectory);
 
   try {
     fs.writeFileSync(path.join(pathToWritePackage, "package.json"), JSON.stringify(pckgJson(inputDirectory)));
-    log(chalk.green("✔️  Package.json created"));
+    log(chalk.green("[2/4]  ✔️  Package.json created"));
   } catch (e) {
     throw new Error("Package json create error");
   }
 
   try {
     fs.copyFileSync(`${__dirname}/templates/template.js`, `${pathToWritePackage}/index.js`);
-    log(chalk.green("✔️  Index.js created"));
+    log(chalk.green("[3/4]  ✔️  Index.js created"));
   } catch (e) {
     throw new Error("Copy file operation halt");
   }

@@ -3,7 +3,7 @@ const spwanSync = require("node:child_process").spawnSync;
 
 const chalk = require("chalk");
 module.exports.packageInstaller = (pathToWritePackage) => {
-  log(chalk.green("🚧 Installing package: Express, Dotenv, Morgan, Nodemon"));
+  log(chalk.green("[4/4]  🚧 Installing package: Express, Dotenv, Morgan, Nodemon"));
 
   var args = "npm install express morgan dotenv";
 
@@ -26,6 +26,6 @@ module.exports.packageInstaller = (pathToWritePackage) => {
   var childProcess = spwanSync(args, options);
 
   log(childProcess.stdout);
-  log(chalk.green('✔️  Required "npm packages" has been installed'));
+  log(chalk.green("👍 Required 'npm packages' has been installed"));
   log(chalk.blue("❤  Thanks for trying serversetup"));
 };
