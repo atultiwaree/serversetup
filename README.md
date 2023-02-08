@@ -43,6 +43,8 @@ To run this project, you will need to add the following environment variables to
 
 👋 .env constants are given inside index.js as comments feel free to use
 
+[![Open Source Helpers](https://www.codetriage.com/atultiwaree/serversetup/badges/users.svg)](https://www.codetriage.com/atultiwaree/serversetup)
+
 ## Authors
 
 - [@atultiwaree](https://www.github.com/atultiwaree)
