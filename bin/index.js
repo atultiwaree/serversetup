@@ -29,14 +29,14 @@ if (!fs.existsSync(inputDirectory)) {
 
   try {
     fs.writeFileSync(path.join(pathToWritePackage, "package.json"), JSON.stringify(pckgJson(inputDirectory)));
-    log(chalk.green("[2/4]  ✔️  Package.json created"));
+    log(chalk.green("[2/4]  ✔️  Created Package.json"));
   } catch (e) {
     throw new Error("Package json create error");
   }
 
   try {
     fs.copyFileSync(`${__dirname}/templates/template.js`, `${pathToWritePackage}/index.js`);
-    log(chalk.green("[3/4]  ✔️  Index.js created"));
+    log(chalk.green("[3/4]  ✔️  Created Index.js"));
   } catch (e) {
     throw new Error("Copy file operation halt");
   }
