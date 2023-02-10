@@ -1,22 +1,24 @@
 {
   "name": "serversetup",
   "version": "1.0.7",
-  "description": "Serversetup is an 'npx tool' that generates essential files, configure npm packages and serves developers with basic setup of node express server within a minutejust like create-react-app.",
+  "description": "Serversetup is an 'npx tool' that generates essential files, configure npm packages and serves developers with basic setup of node express server within a seconds similar to create-react-app.",
   "main": "index.js",
   "bin": {
     "serversetup": "bin/index.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "serversetup"
+    "url": "https://github.com/atultiwaree/serversetup"
   },
   "keywords": [
     "server",
     "node",
-    "serversetup"
+    "serversetup",
+    "express",
+    "mongoose",
+    "mongodb",
+    "cli",
+    "create-react-app"
   ],
   "author": "Atul Tiwaree",
   "license": "ISC",

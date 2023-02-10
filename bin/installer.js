@@ -1,11 +1,12 @@
 const log = require("node:console").log;
+var execs = require("child_process").exec;
 
 const packageInstaller = require("./utils/spwan.utils");
 
 const chalk = require("chalk");
 
 module.exports.packageInstaller = (pathToWritePackage) => {
-  log(chalk.green("[4/4]  🚧 Installing package: Express, Dotenv, Morgan, Nodemon"));
+  log(chalk.green("[4/6]  🚧 Installing package: 'Express', 'Dotenv', 'Morgan'"));
 
   var args = "npm install express morgan dotenv";
 
@@ -22,7 +23,17 @@ module.exports.packageInstaller = (pathToWritePackage) => {
 
   log(childProcess.stdout);
 
-  log(chalk.green("👍 Required 'npm packages' has been installed"));
+  log(chalk.green("[5/6]  🚧 Installing package globaly: 'Nodemon'"));
 
-  log(chalk.blue("❤  Thanks for trying serversetup"));
+  var childProcessNodemon = packageInstaller.spwanWrapper("npm i -g nodemon", options);
+
+  log(childProcessNodemon.stdout);
+
+  log(chalk.green("✔️  All required packages has been installed"));
+
+  var childProcessServerStart = packageInstaller.spwanWrapper("nodemon index.js", options);
+
+  log(childProcessServerStart.stdout);
+
+  log(chalk.blue("✔️  Now you can start your server"));
 };

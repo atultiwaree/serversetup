@@ -22,9 +22,11 @@ app.get("/", (req, res) => res.status(200).json({ status: "Everything is fine." 
 
 */
 
-server.listen(PORT, (err) =>
-  !err ? console.log(`✔ Node Listening to http://localhost:${PORT}`) : console.log("There was some error ", err.message)
-);
+server.listen(PORT, (err) => {
+  if (!err) {
+    return `✔ Node Listening to http://localhost:${PORT}`;
+  } else return `There was some error ", ${err.message}`;
+});
 
 /**
  * 📝 Make .env file and copy paste below lines 
