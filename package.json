@@ -1,6 +1,6 @@
 {
   "name": "serversetup",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Serversetup is an 'npx tool' that generates essential files, configure npm packages and serves developers with basic setup of node express server within a seconds similar to create-react-app.",
   "main": "index.js",
   "bin": {
