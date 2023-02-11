@@ -19,11 +19,11 @@ After installation just move to your directory and run below cli command
   node --watch index
 ```
 
-If you're using node version < 18
+If you're using node version < 18 by default
+serversetup installs nodemon globally you can go with nodemon itself
 
 ```bash
   cd <your-directory>
-  npm i -g nodemon
   nodemon
 ```
 
