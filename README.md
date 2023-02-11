@@ -41,7 +41,9 @@ To run this project, you will need to add the following environment variables to
 
 `Mogodb connection url`
 
-👋 .env constants are given inside index.js as comments feel free to use
+👋 by default serversetup will add .env test file
+
+[![Open Source Helpers](https://www.codetriage.com/atultiwaree/serversetup/badges/users.svg)](https://www.codetriage.com/atultiwaree/serversetup)
 
 ## Authors
 
