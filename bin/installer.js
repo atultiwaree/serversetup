@@ -6,7 +6,7 @@ const packageInstaller = require("./utils/spwan.utils");
 const chalk = require("chalk");
 
 module.exports.packageInstaller = (pathToWritePackage) => {
-  log(chalk.green("[5/5]  🚧 Installing package: 'Express', 'Dotenv', 'Morgan'"));
+  log(chalk.green("[5/6]  🚧 Installing package: 'Express', 'Dotenv', 'Morgan'"));
 
   var args = "npm install express morgan dotenv";
 
@@ -23,7 +23,7 @@ module.exports.packageInstaller = (pathToWritePackage) => {
 
   log(childProcess.stdout);
 
-  log(chalk.green("[5/5]  🚧 Installing package globally: 'Nodemon'"));
+  log(chalk.green("[6/6]  🚧 Installing package globally: 'Nodemon'"));
 
   var childProcessNodemon = packageInstaller.spwanWrapper("npm i -g nodemon", options);
 
